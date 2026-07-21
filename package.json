@@ -1,0 +1,22 @@
+{  
+  "name": "secure-verification-bot",  
+  "version": "1.0.0",  
+  "description": "Security verification,  
+  "main": "server.js",  
+  "scripts": {  
+    "start": "node server.js",  
+    "test": "echo \"Error: no test specified\" && exit 1"  
+  },  
+  "keywords": [  
+    "security",  
+    "turnstile",  
+    "telegram"  
+  ],  
+  "author": "",  
+  "license": "ISC",  
+  "dependencies": {  
+    "axios": "^1.6.8",  
+    "cors": "^2.8.5",  
+    "express": "^4.19.2"  
+  }  
+}  
