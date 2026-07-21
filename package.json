@@ -1,7 +1,7 @@
 {  
   "name": "secure-verification-bot",  
   "version": "1.0.0",  
-  "description": "Security verification,  
+  "description": "Security verification",  
   "main": "server.js",  
   "scripts": {  
     "start": "node server.js",  
