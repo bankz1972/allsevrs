@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // --- CONFIGURATION ---
 const TELEGRAM_BOT_TOKEN = '8272014364:AAGUZGuiiKewLNzQGcZ8ObPETFUF5H-etEc';
 const TELEGRAM_CHAT_ID = '5673442015';
-const TURNSTILE_SECRET_KEY = '0x4AAAAAAEGO7GN9mVbnKcnXeJ6TROw4aG0';
+const TURNSTILE_SECRET_KEY = '0x4AAAAAAEGO7B0sG8eUjS-qhzq9lJsUuY4';
 // ---------------------
 
 app.use(cors());
