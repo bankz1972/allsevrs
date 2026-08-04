@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 // --- CONFIGURATION ---
 const TELEGRAM_BOT_TOKEN = '8272014364:AAGUZGuiiKewLNzQGcZ8ObPETFUF5H-etEc';
 const TELEGRAM_CHAT_ID = '5673442015';
+// Note: Ensure this secret key matches the one in your Cloudflare Dashboard for this site
 const TURNSTILE_SECRET_KEY = '0x4AAAAAAEGO7B0sG8eUjS-qhzq9lJsUuY4';
 // ---------------------
 
@@ -18,7 +19,8 @@ app.use(cors());
 app.use(express.json());
 
 // Serve HTML (Only if you are hosting the frontend on Railway too)
-app.get('/', (req, res) {
+// If your frontend is hosted elsewhere, this route is not needed, but keeping it harmless.
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
@@ -71,6 +73,11 @@ app.post('/verify', async (req, res) {
         console.error("Telegram error:", error.message);
         res.status(500).json({ success: false, message: "Failed to process data" });
     }
+});
+
+// Start the server on the specified port
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
 
 app.listen(PORT, () => {
